@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: "The Hub for Every Dev Event you Musn't Miss",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,29 +30,26 @@ export default function RootLayout({
       <body
         className={`${martianMono.variable} ${schibstedGrotesk.variable} min-h-screen antialiased`}
       >
-
-        <NavBar />
-        <div className="absolute inset-0 top-0 min-h-screen z-[-1] ">
-
-          <LightRays
-            raysOrigin="top-center-offset"
-            raysColor="#5dfeca"
-            raysSpeed={0.7}
-            lightSpread={0.9}
-            rayLength={2}
-            followMouse={true}
-            mouseInfluence={0.05}
-            noiseAmount={0}
-            distortion={0.03}
-            className="custom-rays"
-            pulsating={false}
-            fadeDistance={0.5}
-            saturation={0.2}
-          />
-        </div>
-        <main>
-          {children}
-        </main>
+        
+          <NavBar />
+          <div className="absolute inset-0 top-0 min-h-screen z-[-1] ">
+            <LightRays
+              raysOrigin="top-center-offset"
+              raysColor="#5dfeca"
+              raysSpeed={0.7}
+              lightSpread={0.9}
+              rayLength={2}
+              followMouse={true}
+              mouseInfluence={0.05}
+              noiseAmount={0}
+              distortion={0.03}
+              className="custom-rays"
+              pulsating={false}
+              fadeDistance={0.5}
+              saturation={0.2}
+            />
+          </div>
+          <main>{children}</main>
       </body>
     </html>
   );
