@@ -46,7 +46,7 @@ if (!global.mongoose) {
  * Connect to MongoDB and return the Mongoose instance.
  * Subsequent calls return the cached connection without re-connecting.
  */
-export async function connectToDatabase(): Promise<typeof mongoose> {
+export async function connectDB(): Promise<typeof mongoose> {
   // Re-use an existing, open connection
   if (cached.conn) {
     return cached.conn;
